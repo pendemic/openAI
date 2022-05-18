@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './response.css';
 import ResponseList from './ResponseList';
 import { Button, Card, List } from 'antd';
 export default function Response({prompt}) {
-    const responseList = [];
-    const [list, setList] = useState(responseList);
+    var responseList = {};
+    const [list, setList] = useState([]);
     const data = {
         prompt: prompt,
         temperature: 0.5,
@@ -22,15 +22,17 @@ export default function Response({prompt}) {
     },
     body: JSON.stringify(data),
    }).then(response => response.json()
-   ).then(data => responseList.push([prompt,data.choices[0].text]));
-   setList(list => [...list, responseList]);
-    }       
+   ).then(data => responseList['response'] = data.choices[0].text).then(data => responseList['prompt'] = prompt);
+    setList(list => [...list, responseList]);
+    console.log(list);
+    }
+           
   return (
       <>
         <Button  onClick={() => fetchResponse()}className="submitBtn" ghost>
           Submit
         </Button>
-    <List
+     <List
       header={<h2 className="responseTitle">Responses</h2>}
       dataSource={list}
       size="small"

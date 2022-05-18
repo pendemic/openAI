@@ -11,7 +11,6 @@ function App() {
   const onClick = ({ key }) => {
     setPrompt(`${key}`);
   };
-  console.log(prompt);
   const menu = (
     <Menu
       onClick={onClick}
