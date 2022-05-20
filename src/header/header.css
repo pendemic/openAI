@@ -7,12 +7,22 @@
 }
 .headerWrapper{
     height: 100%;
-    padding: 0px 20px;
+    padding: 0px;
     display: flex;
     align-items: center;
+    flex-direction: column;
+    float: left;
 }
 .title{
     font-weight: bold;
-    font-size: 30px;
+    font-size: 70px;
     color: white;
+}
+.icons{
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    float: right;
+    width: 20%
 }

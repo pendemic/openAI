@@ -1,0 +1,11 @@
+.loading{
+    background-color: #122b40;
+    min-height: 100vh;
+}
+.loadingTitle{
+    padding-top: 10%;
+    margin-left: 40%;
+    font-weight: bold;
+    font-size: 72px;
+    color: white;
+}

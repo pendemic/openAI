@@ -1,13 +1,13 @@
 .App {
-  background-color: #282c34;
-  min-height: 100vh;
-  padding-left: 30%;
-  padding-top: 5%;
+  background-color: #122b40;
+  min-height: 200vh;
+  padding-left: 5%;
+  padding-top: 1%;
 }
 .prompt{
-  width: 50%;
-  margin-left: 1%;
-  margin-top: 10%;
+  width: 38%;
+  margin-top: 23%;
+  float: left;
 }
 .promptText{
   color: white;
@@ -15,4 +15,9 @@
 }
 .submitBtn{
   margin-top: 2%;
+}
+.response{
+  flex-direction: column;
+  width: 40%;
+  float: right;
 }
