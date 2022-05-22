@@ -5,13 +5,14 @@
   padding-top: 1%;
 }
 .prompt{
-  width: 38%;
-  margin-top: 23%;
+  width: 40%;
+  margin-top: 8%;
   float: left;
 }
 .promptText{
   color: white;
   font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .submitBtn{
   margin-top: 2%;
@@ -20,4 +21,14 @@
   flex-direction: column;
   width: 40%;
   float: right;
+}
+.titleText{
+  font-weight: bold;
+  font-size: 70px;
+  color: white;
+  margin-top: 10%;
+}
+.title{
+  width: 40%;
+  margin-top: 5%;
 }

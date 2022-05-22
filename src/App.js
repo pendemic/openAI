@@ -63,13 +63,18 @@ function App() {
   return loading === false? (
     <div className="App">
         <Header/>
+        <div className="title">
+          <span className="titleText">
+            AI Chat
+          </span>
+        </div>
         <div className="prompt">
           <span className="promptText">Enter Prompt:</span>
           <Dropdown overlay={menu} >
           <a style={{margin: '5%'}} onClick={e => e.preventDefault()}>
           Hover for options</a>
           </Dropdown>
-          <TextArea onChange={v => setPrompt(v.target.value)} value={prompt} rows={8}/>
+          <TextArea onChange={v => setPrompt(v.target.value)} value={prompt} rows={8} placeholder="Use the prompt textbox to ask the AI for anything you'd like!"/>
           <Button  onClick={() => fetchResponse()}className="submitBtn" ghost>
           Submit
         </Button>
